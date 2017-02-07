@@ -15,12 +15,12 @@
 
 @implementation ViewController
 
-RestManager *restMan;
- 
+RestManager *restManager;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    restMan = [[RestManager alloc]init];
+    restManager = [[RestManager alloc]init];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -32,7 +32,7 @@ RestManager *restMan;
 
 - (IBAction)buttonTapped:(UIButton *)sender
 {
-    [restMan blassss];
+    [restManager blassss];
 }
 
 @end
