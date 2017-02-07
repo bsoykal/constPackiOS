@@ -16,6 +16,7 @@
 @implementation ViewController
 
 RestManager *restMan;
+ 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
