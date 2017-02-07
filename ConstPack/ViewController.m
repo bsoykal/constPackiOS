@@ -32,7 +32,7 @@ RestManager *restManager;
 
 - (IBAction)buttonTapped:(UIButton *)sender
 {
-    [restManager blassss];
+    [restManager dothat];
 }
 
 @end

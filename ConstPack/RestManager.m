@@ -12,7 +12,7 @@
 @implementation RestManager
 
 
--(void)blassss {
+-(void)dothat {
     NSLog(@"Baran");
 }
 
