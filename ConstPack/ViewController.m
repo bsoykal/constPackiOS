@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "RestManager.h"
 
 @interface ViewController ()
 
@@ -14,8 +15,11 @@
 
 @implementation ViewController
 
+RestManager *restMan;
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    restMan = [[RestManager alloc]init];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -25,5 +29,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonTapped:(UIButton *)sender
+{
+    [restMan blassss];
+}
 
 @end
