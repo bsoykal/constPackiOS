@@ -7,7 +7,7 @@
 //
 
 @interface RestManager : NSObject
-- (void)blassss ;
+- (void)dothat ;
 @end
 
 
