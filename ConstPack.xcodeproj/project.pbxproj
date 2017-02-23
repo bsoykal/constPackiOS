@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		261186C91E5F6026001C0AEF /* splash_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 261186C81E5F6026001C0AEF /* splash_bg.png */; };
+		261186CF1E5F6D11001C0AEF /* constpack_logo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 261186CE1E5F6D11001C0AEF /* constpack_logo_white.png */; };
 		2686EC691E5EFB98003DBF9D /* Requests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2686EC681E5EFB98003DBF9D /* Requests.m */; };
 		8D6626D11E4A619F00C38AFE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6626D01E4A619F00C38AFE /* main.m */; };
 		8D6626D41E4A619F00C38AFE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D6626D31E4A619F00C38AFE /* AppDelegate.m */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		261186C81E5F6026001C0AEF /* splash_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash_bg.png; path = "../../StudioProjects/constPack/app/src/main/res/mipmap-hdpi/splash_bg.png"; sourceTree = "<group>"; };
+		261186CE1E5F6D11001C0AEF /* constpack_logo_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = constpack_logo_white.png; path = "../../StudioProjects/constPack/app/src/main/res/drawable-xxhdpi/constpack_logo_white.png"; sourceTree = "<group>"; };
 		2686EC681E5EFB98003DBF9D /* Requests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Requests.m; sourceTree = "<group>"; };
 		268DBFB81E5EDAAB00C3A90E /* Requests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Requests.h; sourceTree = "<group>"; };
 		2F6FEC66A4E15F5165C0A47A /* libPods-ConstPack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConstPack.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +89,8 @@
 		8D6626CF1E4A619F00C38AFE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				261186CE1E5F6D11001C0AEF /* constpack_logo_white.png */,
+				261186C81E5F6026001C0AEF /* splash_bg.png */,
 				8D6626D01E4A619F00C38AFE /* main.m */,
 			);
 			name = "Supporting Files";
@@ -180,6 +186,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D6626DC1E4A619F00C38AFE /* Assets.xcassets in Resources */,
+				261186CF1E5F6D11001C0AEF /* constpack_logo_white.png in Resources */,
+				261186C91E5F6026001C0AEF /* splash_bg.png in Resources */,
 				8D6626DA1E4A619F00C38AFE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
