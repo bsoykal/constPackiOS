@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "RestManager.h"
 
+
 @interface ViewController ()
 
 @end
@@ -32,7 +33,11 @@ RestManager *restManager;
 
 - (IBAction)buttonTapped:(UIButton *)sender
 {
-    [restManager dothat];
+    LoginRequest* loginRequest = [[LoginRequest alloc] init];
+    loginRequest.eposta = @"emrahgenc@outlook.com";
+    loginRequest.password = @"123";
+
+    [restManager dothis:loginRequest];
 }
 
 @end
