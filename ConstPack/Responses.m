@@ -10,10 +10,11 @@
 #import "Responses.h"
 
 @implementation Responses
+@end
 
+@implementation BaseResponse
 @end
 
 
 @implementation LoginResponse
-
 @end

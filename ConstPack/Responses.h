@@ -13,13 +13,19 @@
 @interface  Responses: NSObject
 @end
 
-#pragma mark LoginRequest
-
-@interface LoginResponse : JSONModel
+#pragma mark BaseResponse
+@interface BaseResponse : JSONModel
 
 @property (nonatomic, assign) BOOL result;
 @property (nonatomic, assign) int errorId;
 @property (nonatomic, retain) NSString *errorMsg;
+
+@end
+
+#pragma mark LoginResponse
+
+@interface LoginResponse : BaseResponse
+
 @property (nonatomic, retain) User *data;
 
 @end

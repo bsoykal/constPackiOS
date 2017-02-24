@@ -204,7 +204,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = "Bartu Kusculuoglu";
+				ORGANIZATIONNAME = ConstPack;
 				TargetAttributes = {
 					8D6626CB1E4A619F00C38AFE = {
 						CreatedOnToolsVersion = 8.1;

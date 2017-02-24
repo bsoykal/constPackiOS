@@ -23,3 +23,14 @@
 @property (nonatomic,assign) BOOL durum;
 
 @end
+
+
+
+@interface Error : NSObject
+
+@property (nonatomic,assign) int errorId;
+@property (nonatomic,retain) NSString *errorMsg;
+
+- (void) initWithErrorId:(int) errorId withMessage:(NSString *)errorMsg;
+
+@end

@@ -10,9 +10,15 @@
 #import "Domains.h"
 
 @implementation Domains
-
 @end
 
-
 @implementation User
+@end
+
+@implementation Error
+- (void) initWithErrorId:(int) errorId withMessage:(NSString *)errorMsg{
+    self.errorId = errorId;
+    self.errorMsg = errorMsg;
+}
+
 @end

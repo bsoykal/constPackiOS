@@ -41,13 +41,11 @@ RestManager *restManager;
     [restManager doLoginRequest:loginRequest
      
                      onResponse: ^(LoginResponse *loginresponse) {
-       
-                         NSLog(@"Oldu");
                          
                          
-                     }onError: ^(NSError *error){
+                     }onError: ^(Error *error){
                          
-                         NSLog(@"Olmadi");
+                         NSLog(@"Error :: %@",error.errorMsg);
 
                      }];
     

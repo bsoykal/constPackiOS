@@ -12,39 +12,43 @@
 @implementation RestManager
 
 
-
-
-
-
--(void)doPostRequestWithSuffix:(NSString*) suffix withParameters:(NSDictionary*) paramters withSuccess:(void (^)(NSURLSessionTask *task, id responseObject))success withFailure:(void (^)(NSURLSessionTask *operation, NSError *error))failure{
+-(void)doPostRequestWithSuffix:(NSString*) suffix withParameters:(NSDictionary*) paramters withSuccess:(void (^)(id responseObject))success withFailure:(void (^)(Error *error))failure{
     NSURL *URL = [NSURL URLWithString: [NSString stringWithFormat:@"%@/%@", BASE_URL, suffix]];
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",nil];
-    [manager POST:URL.absoluteString parameters: paramters progress:nil success:^(NSURLSessionTask *task, id responseObject) {
-        success(task,responseObject);
-    } failure:^(NSURLSessionTask *operation, NSError *error) {
-        failure(operation,error);
-    }];
+    [manager POST:URL.absoluteString
+          parameters: paramters
+          progress:nil
+          success:^(NSURLSessionTask *task, id responseObject){
+                NSLog(@"%@", responseObject);
+                if(((BaseResponse *)responseObject).result == true){
+                    success(responseObject);
+                }else{
+                    Error *error = [[Error alloc] init];
+                    [error initWithErrorId:((BaseResponse *)responseObject).errorId withMessage:((BaseResponse *)responseObject).errorMsg];
+                    failure(error);
+                }
+          }
+          failure:^(NSURLSessionTask *operation, NSError *error){
+                NSLog(@"%@", error);
+                Error *errorTmp = [[Error alloc] init];
+                [errorTmp initWithErrorId:(int) [error code] withMessage: [error localizedDescription]];
+                failure(errorTmp);
+          }];
 }
 
 
+-(void)doLoginRequest :(LoginRequest*)loginRequest onResponse:(void (^)(LoginResponse* loginResponse))success onError:(void (^)(Error *error)) failure{
+    
 
--(void)doLoginRequest :(LoginRequest*)loginRequest onResponse:(void (^)(LoginResponse* loginResponse))success onError:(void (^)(NSError *error)) failure{
-    [self doPostRequestWithSuffix :@"Login" withParameters:[loginRequest toDictionary] withSuccess:^(NSURLSessionTask *task, id responseObject) {
-        NSLog(@"%@", responseObject);
+    [self doPostRequestWithSuffix :@"Login" withParameters:[loginRequest toDictionary] withSuccess:^(id responseObject) {
         success(responseObject);
-
-    } withFailure:^(NSURLSessionTask *operation, NSError *error) {
-        NSLog(@"%@", error);
+    } withFailure:^(Error *error) {
         failure(error);
     }];
 }
 
-     
-
-
-//@implementation RestManager
 
 @end
