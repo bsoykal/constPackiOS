@@ -8,11 +8,12 @@
 
 
 #import <JSONModel/JSONModel.h>
+#import "Domains.h"
 
 @interface Requests: NSObject
 @end
 
-#pragma mark Transactions History
+#pragma mark LoginRequest
 
 @interface LoginRequest : JSONModel
 

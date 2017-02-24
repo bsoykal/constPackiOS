@@ -9,10 +9,14 @@
 
 #import <Foundation/Foundation.h>
 #import "Requests.h"
+#import "Responses.h"
+
+static NSString *const BASE_URL = @"http://www.emrhgnc.com/api/";
 
 @interface RestManager : NSObject
-- (void)dothat ;
-- (void)dothis: (LoginRequest*)loginRequest ;
+
+-(void)doLoginRequest :(LoginRequest*)loginRequest onResponse:(void (^)(LoginResponse* loginResponse))response onError:(void (^)(NSError *error)) error;
+
 @end
 
 

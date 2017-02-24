@@ -37,7 +37,22 @@ RestManager *restManager;
     loginRequest.eposta = @"emrahgenc@outlook.com";
     loginRequest.password = @"123";
 
-    [restManager dothis:loginRequest];
+    [restManager doLoginRequest:loginRequest
+     
+                     onResponse: ^(LoginResponse *loginresponse) {
+       
+                         NSLog(@"Oldu");
+                         
+                         
+                     }onError: ^(NSError *error){
+                         
+                         NSLog(@"Olmadi");
+
+                     }];
 }
 
 @end
+
+
+
+
