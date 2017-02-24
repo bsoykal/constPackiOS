@@ -15,7 +15,7 @@
 @end
 
 @implementation ViewController
-
+//@synthesize userName,passwd;
 RestManager *restManager;
 
 - (void)viewDidLoad {
@@ -37,6 +37,7 @@ RestManager *restManager;
     loginRequest.eposta = @"emrahgenc@outlook.com";
     loginRequest.password = @"123";
 
+    
     [restManager doLoginRequest:loginRequest
      
                      onResponse: ^(LoginResponse *loginresponse) {
@@ -49,10 +50,21 @@ RestManager *restManager;
                          NSLog(@"Olmadi");
 
                      }];
+    
+    /*NSString * pulledUserName = userName.text;
+    NSString * pulledPasswd   = passwd.text;
+    if (sizeof(pulledUserName) == 0 || sizeof(pulledPasswd) == 0) {
+        //UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Hata"
+           //                                           message:@"Lütfen alanları boş bırakmayın"
+          //                                           delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        //[av show];
+        NSLog(@"%@", pulledUserName);
+    }
+ */
 }
 
-@end
 
+@end
 
 
 
