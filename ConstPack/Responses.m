@@ -12,9 +12,14 @@
 @implementation Responses
 @end
 
+
 @implementation BaseResponse
 @end
 
 
 @implementation LoginResponse
+@end
+
+
+@implementation ProjectsResponse
 @end
