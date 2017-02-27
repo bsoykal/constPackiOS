@@ -14,10 +14,7 @@
 @end
 
 #pragma mark LoginRequest
-
 @interface LoginRequest : JSONModel
-
-@property (nonatomic, strong) NSString *eposta;
-@property (nonatomic, strong) NSString *password;
-
+@property (nonatomic, retain) NSString *eposta;
+@property (nonatomic, retain) NSString *password;
 @end

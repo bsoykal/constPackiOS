@@ -15,7 +15,7 @@
 @end
 
 @implementation ViewController
-//@synthesize userName,passwd;
+@synthesize userName,passwd;
 RestManager *restManager;
 
 - (void)viewDidLoad {
@@ -34,11 +34,25 @@ RestManager *restManager;
 - (IBAction)buttonTapped:(UIButton *)sender
 {
     LoginRequest* loginRequest = [[LoginRequest alloc] init];
-    loginRequest.eposta = @"emrahgenc@outlook.com";
-    loginRequest.password = @"123";
-
+    //loginRequest.eposta = @"emrahgenc@outlook.com";
+    //loginRequest.password = @"123";
+    NSString *pulledUserName = userName.text;
+    NSString *pulledPasswd   = passwd.text;
     
-    [restManager doLoginRequest:loginRequest
+    loginRequest.eposta   = pulledUserName;
+    loginRequest.password = pulledPasswd;
+    
+    if (pulledUserName.length == 0 || pulledPasswd.length == 0) {
+    
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hata"
+                                                        message:@"Lütfen boşlukları doldurun."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        
+    }
+    /*[restManager doLoginRequest:loginRequest
      
                      onResponse: ^(LoginResponse *loginresponse) {
                          
@@ -49,16 +63,9 @@ RestManager *restManager;
 
                      }];
     
-    /*NSString * pulledUserName = userName.text;
-    NSString * pulledPasswd   = passwd.text;
-    if (sizeof(pulledUserName) == 0 || sizeof(pulledPasswd) == 0) {
-        //UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Hata"
-           //                                           message:@"Lütfen alanları boş bırakmayın"
-          //                                           delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        //[av show];
-        NSLog(@"%@", pulledUserName);
-    }
- */
+    */
+
+ 
 }
 
 
