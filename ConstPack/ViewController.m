@@ -42,10 +42,20 @@ RestManager *restManager;
      
                      onResponse: ^(LoginResponse *loginresponse) {
                          
+                         [restManager doGetProjectsRequest : [NSString stringWithFormat:@"%d",loginresponse.data.kullaniciId]
+                                                 onResponse: ^(ProjectsResponse* projectsResponse){
+                                                     NSLog(@"Success :: project size %lu",(unsigned long)[projectsResponse.data count]);
+                                                 }
+                                                onError: ^(Error *error){
+                                                        NSLog(@"Error occured :: projects request");
+                                                    }];
+
+                         
+                         
                          
                      }onError: ^(Error *error){
                          
-                         NSLog(@"Error :: %@",error.errorMsg);
+                         NSLog(@"Error occured :: loginrequest");
 
                      }];
     

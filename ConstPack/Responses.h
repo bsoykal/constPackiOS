@@ -13,20 +13,22 @@
 @interface  Responses: NSObject
 @end
 
+@protocol Project @end
+
 #pragma mark BaseResponse
 @interface BaseResponse : JSONModel
 @property (nonatomic, assign) BOOL result;
 @property (nonatomic, assign) int errorId;
-@property (nonatomic, retain) NSString *errorMsg;
+@property (nonatomic, retain)  NSString <Optional> *errorMsg;
 @end
 
 #pragma mark LoginResponse
 @interface LoginResponse : BaseResponse
-@property (nonatomic, retain) User *data;
+@property (nonatomic, retain)  User * data;
 @end
 
 #pragma mark ProjectsResponse
 
 @interface ProjectsResponse : BaseResponse
-@property(nonatomic, retain) NSMutableArray* data;
+@property(nonatomic, strong)  NSMutableArray<Project> * data;
 @end

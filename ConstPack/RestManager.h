@@ -17,6 +17,9 @@ static NSString *const BASE_URL = @"http://www.emrhgnc.com/api/";
 
 -(void)doLoginRequest :(LoginRequest*)loginRequest onResponse:(void (^)(LoginResponse* loginResponse))response onError:(void (^)(Error *error)) error;
 
+
+-(void)doGetProjectsRequest :(NSString*)userId onResponse:(void (^)(ProjectsResponse* projectsResponse))success onError:(void (^)(Error *error)) failure;
+
 @end
 
 

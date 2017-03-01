@@ -18,7 +18,7 @@
 @property (nonatomic,assign) int kullaniciId;
 @property (nonatomic,retain) NSString *kullaniciAdi;
 @property (nonatomic,retain) NSString *unvan;
-@property (nonatomic,assign) int rollId;
+@property (nonatomic,assign) int rolId;
 @property (nonatomic,retain ) NSString *eposta;
 @property (nonatomic,assign) BOOL durum;
 @end
