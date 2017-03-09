@@ -38,20 +38,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aJ-oo-KnA">
-                                <rect key="frame" x="185" y="433" width="44" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Giriş"/>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Kxp-Fv-430"/>
-                                    <segue destination="6iS-mo-IRS" kind="show" id="8an-ec-34u"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="constpack_logo_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="zAr-sr-vyF">
                                 <rect key="frame" x="112" y="106" width="190" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1aJ-oo-KnA">
+                                <rect key="frame" x="185" y="435" width="44" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Giriş"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="dkx-z0-nzr" eventType="primaryActionTriggered" id="5Ow-dv-cQE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -89,42 +88,56 @@
             </objects>
             <point key="canvasLocation" x="1866" y="367"/>
         </scene>
-        <!--Item 1-->
+        <!--View1-->
         <scene sceneID="aR2-tU-2uF">
             <objects>
-                <viewController id="qcP-T8-Glh" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="View1" id="qcP-T8-Glh" userLabel="View1" customClass="TestController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dT8-HI-DxU"/>
                         <viewControllerLayoutGuide type="bottom" id="gL0-uA-1LL"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vTp-Qv-te8">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="View1" id="vTp-Qv-te8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhX-dC-K8z">
+                                <rect key="frame" x="135" y="254" width="145" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="0.27487510659200631" blue="0.24813586895156736" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="lightTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonSeeked:" destination="eUT-Jv-BLu" eventType="primaryActionTriggered" id="EVg-aA-R11"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="e4I-Sr-0yB"/>
+                    <tabBarItem key="tabBarItem" title="Item" id="x7I-g1-y6B"/>
+                    <navigationItem key="navigationItem" id="0VM-lr-PKs"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eUT-Jv-BLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1866" y="-288"/>
+            <point key="canvasLocation" x="1865" y="-302"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="DcF-VZ-bh1">
             <objects>
-                <tabBarController id="6iS-mo-IRS" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TestIdentifier" id="6iS-mo-IRS" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="GKk-cV-j6S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="qcP-T8-Glh" kind="relationship" relationship="viewControllers" id="3dE-fR-yS7"/>
-                        <segue destination="umK-VI-QAs" kind="relationship" relationship="viewControllers" id="9u5-pr-oCM"/>
+                        <segue destination="qcP-T8-Glh" kind="relationship" relationship="viewControllers" id="JPs-zi-vKQ"/>
+                        <segue destination="umK-VI-QAs" kind="relationship" relationship="viewControllers" id="vsn-O3-IJ3"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jxp-lg-tLO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="915" y="39"/>
+            <point key="canvasLocation" x="954" y="-48"/>
         </scene>
     </scenes>
     <resources>
