@@ -1,18 +1,18 @@
 //
-//  TabControllerViewController.m
+//  ProfileController.m
 //  ConstPack
 //
-//  Created by Burak Soykal on 08/03/2017.
+//  Created by burak soykal on 09/03/2017.
 //  Copyright © 2017 ConstPack. All rights reserved.
 //
 
-#import "TabControllerViewController.h"
+#import "ProfileController.h"
 
-@interface TabControllerViewController ()
+@interface ProfileController ()
 
 @end
 
-@implementation TabControllerViewController
+@implementation ProfileController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

@@ -1,5 +1,5 @@
 //
-//  TabControllerViewController.h
+//  UIViewController+TestController.h
 //  ConstPack
 //
 //  Created by Burak Soykal on 08/03/2017.
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@interface HomeController : UIViewController
 
-@interface TabControllerViewController : UIViewController
+- (IBAction)buttonSeeked:(UIButton *)seeker;
 
 @end

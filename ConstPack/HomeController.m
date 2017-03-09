@@ -6,13 +6,13 @@
 //  Copyright © 2017 ConstPack. All rights reserved.
 //
 
-#import "TestController.h"
+#import "HomeController.h"
 
-@interface TestController ()
+@interface HomeController ()
 
 @end
 
-@implementation TestController
+@implementation HomeController
 
 
 - (void)viewDidLoad {
