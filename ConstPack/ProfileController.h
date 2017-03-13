@@ -10,4 +10,9 @@
 
 @interface ProfileController : UIViewController
 
+@property (nonatomic,retain) NSString *name;
+
+@property (weak, nonatomic) IBOutlet UILabel *pLabel;
+
+
 @end

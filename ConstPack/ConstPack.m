@@ -8,6 +8,12 @@
 
 #import "ConstPack.h"
 
+@interface ConstPack ()
+//private property
+@end
+
+static ConstPack* singleInstance;
+
 @implementation ConstPack
 
 + (ConstPack*)getInstance

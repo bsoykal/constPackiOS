@@ -7,8 +7,12 @@
 //
 
 #import "TabController.h"
+#import "ProfileController.h"
+#import "HomeNavigationController.h"
+#import "HomeController.h"
 
-@interface TabController ()
+@interface TabController () <UITabBarControllerDelegate>
+
 
 @end
 
@@ -33,5 +37,34 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void)doThis{
+    
+    self.selectedIndex=1;
+    
+    HomeNavigationController *hnc = (HomeNavigationController*)[self.viewControllers objectAtIndex:1];
+    
+    
+    HomeController *hmctr = [hnc.viewControllers objectAtIndex:0];
+    
+//    [hmctr testStringControllerLoad:@"Burak"];
+    
+    
+//    ProfileController * p=  (ProfileController *)[self.viewControllers objectAtIndex:1];
+    
+//    [p.pLabel setText:@"Burak"];
+    
+}
+
+
+
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
+    
+   
+    
+    
+    
+    return YES;
+}
 
 @end

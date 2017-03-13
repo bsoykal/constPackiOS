@@ -1,0 +1,25 @@
+//
+// Prefix header for all source files of the 'BKMExpress' target in the 'BKMExpress' project
+//
+
+#import <Availability.h>
+
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "ConstPack.h"
+
+#endif
+
+#ifdef DEBUG
+#define DebugLog(...) NSLog(__VA_ARGS__) // LogMessageF(__FILE__, __LINE__, __PRETTY_FUNCTION__, nil, 0, __VA_ARGS__)
+#define DebugLogNetwork(...) NSLog(__VA_ARGS__) // LogMessageF(__FILE__, __LINE__, __PRETTY_FUNCTION__, @"Network", 0, __VA_ARGS__)
+#define DebugLogJSON(...) NSLog(__VA_ARGS__) // LogMessageF(__FILE__, __LINE__, __PRETTY_FUNCTION__, @"JSON", 0, __VA_ARGS__)
+#define _ASSERT(STATEMENT) do { assert(STATEMENT); } while(0)
+#else
+#define DebugLog(s, ... )
+#define DebugLogNetwork(s, ... )
+#define DebugLogJSON(s, ... )
+#define _ASSERT(STATEMENT) do { (void) sizeof(STATEMENT); } while(0)
+#endif

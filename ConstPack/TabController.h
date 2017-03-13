@@ -10,4 +10,6 @@
 
 @interface TabController : UITabBarController
 
+-(void)doThis;
+
 @end

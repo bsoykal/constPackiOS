@@ -10,9 +10,11 @@
 
 @interface ConstPack : NSObject
 
-@property NSString *kullaniciId;
+@property(nonatomic,retain) NSString *kullaniciId;
 
 + (ConstPack*)getInstance;
 
 @end
-static ConstPack* singleInstance;
+
+
+

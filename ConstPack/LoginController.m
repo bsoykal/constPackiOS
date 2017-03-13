@@ -1,6 +1,7 @@
 #import "RestManager.h"
 #import "LoginController.h"
-#import "ConstPack.h"
+#import "TabController.h"
+
 
 @interface LoginController ()
 
@@ -57,19 +58,23 @@ RestManager *restManager;
 
     [restManager doLoginRequest:loginRequest
                      onResponse: ^(LoginResponse *loginresponse) {
-                         [ConstPack getInstance].kullaniciId = [NSString stringWithFormat:@"%d",loginresponse.data.kullaniciId];
+                         [[ConstPack getInstance] setKullaniciId:[NSString stringWithFormat:@"%d",loginresponse.data.kullaniciId]];
+
 
                          [restManager doGetProjectsRequest : [NSString stringWithFormat:@"%d",loginresponse.data.kullaniciId]
                                                  onResponse: ^(ProjectsResponse* projectsResponse){
                                                      NSLog(@"Success :: project size %lu",(unsigned long)[projectsResponse.data count]);
                                                      
                                                      
+                                                     
+                                                     
+                                                     
+                                                     
+                                                     
                                                      NSString * storyboardName = @"Main";
                                                      UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
-                                                     UITabBarController * vc = [storyboard instantiateViewControllerWithIdentifier:@"TabController"];
-                                                     
-                                                     vc.selectedIndex = 1;
-                                                     
+                                                     TabController *vc = (TabController *)([storyboard instantiateViewControllerWithIdentifier:@"TabController"]);
+                                                     [vc doThis];
                                                      
                                                      [self presentViewController:vc animated:YES completion:nil];
                                                      
