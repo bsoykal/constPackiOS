@@ -54,11 +54,18 @@
         homeCell = [[HomeViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
+    
     [homeCell.home_cell_label setText: [labelArray objectAtIndex:indexPath.row]];
     [homeCell.home_cell_image setImage:[UIImage imageNamed:[imageArray objectAtIndex:indexPath.row]]];
    
     
     return homeCell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
