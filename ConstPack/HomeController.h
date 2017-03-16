@@ -6,7 +6,4 @@
 #import <UIKit/UIKit.h>
 @interface HomeController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (weak, nonatomic) IBOutlet UILabel *homeLabel;
-
-
 @end

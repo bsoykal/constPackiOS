@@ -1,4 +1,3 @@
-#import "RestManager.h"
 #import "LoginController.h"
 #import "TabController.h"
 
@@ -9,13 +8,11 @@
 
 @implementation LoginController
 @synthesize userName,passwd;
-RestManager *restManager;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    restManager = [[RestManager alloc]init];
-    // Do any additional setup after loading the view, typically from a nib.
+    userName.text = @"emrahgenc@outlook.com";
+    passwd.text = @"123";
 }
 
 
@@ -27,15 +24,6 @@ RestManager *restManager;
 - (IBAction)buttonTapped:(UIButton *)sender
 {
     LoginRequest* loginRequest = [[LoginRequest alloc] init];
-    //loginRequest.eposta = @"emrahgenc@outlook.com";
-    //loginRequest.password = @"123";
-//    NSString *pulledUserName = ;
-
-//
-    userName.text = @"emrahgenc@outlook.com";
-    passwd.text = @"123";
-    
-    
     loginRequest.eposta   = userName.text;
     loginRequest.password = passwd.text;
     
@@ -56,36 +44,15 @@ RestManager *restManager;
         return;
     }
 
-    [restManager doLoginRequest:loginRequest
+    [[RestManager getInstance] doLoginRequest:loginRequest
                      onResponse: ^(LoginResponse *loginresponse) {
                          [[ConstPack getInstance] setKullaniciId:[NSString stringWithFormat:@"%d",loginresponse.data.kullaniciId]];
+                         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:MAIN_STORYBRD bundle: nil];
+                         TabController *vc = (TabController *)([storyboard instantiateViewControllerWithIdentifier:@"TabController"]);
+                         [vc doThis];
+                         
+                         [self presentViewController:vc animated:YES completion:nil];
 
-
-                         [restManager doGetProjectsRequest : [NSString stringWithFormat:@"%d",loginresponse.data.kullaniciId]
-                                                 onResponse: ^(ProjectsResponse* projectsResponse){
-                                                     NSLog(@"Success :: project size %lu",(unsigned long)[projectsResponse.data count]);
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     
-                                                     NSString * storyboardName = @"Main";
-                                                     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
-                                                     TabController *vc = (TabController *)([storyboard instantiateViewControllerWithIdentifier:@"TabController"]);
-                                                     [vc doThis];
-                                                     
-                                                     [self presentViewController:vc animated:YES completion:nil];
-                                                     
-                                                     
-                                                     
-                                                     
-                                                
-                                                 }
-                                                    onError: ^(Error *error){
-                                                        NSLog(@"Error occured :: projects request");
-                                                    }];
                          
                      }onError: ^(Error *error){
                          UIAlertController * alert = [UIAlertController

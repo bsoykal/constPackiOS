@@ -15,6 +15,8 @@ static NSString *const BASE_URL = @"http://www.emrhgnc.com/api/";
 
 @interface RestManager : NSObject
 
++ (RestManager*)getInstance;
+
 -(void)doLoginRequest :(LoginRequest*)loginRequest onResponse:(void (^)(LoginResponse* loginResponse))response onError:(void (^)(Error *error)) error;
 
 

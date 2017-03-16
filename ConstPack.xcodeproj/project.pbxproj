@@ -17,6 +17,7 @@
 		2686EC691E5EFB98003DBF9D /* Requests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2686EC681E5EFB98003DBF9D /* Requests.m */; };
 		26AB205B1E601E98009F1225 /* Domains.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AB205A1E601E98009F1225 /* Domains.m */; };
 		26AB205F1E604A94009F1225 /* Responses.m in Sources */ = {isa = PBXBuildFile; fileRef = 26AB205E1E604A94009F1225 /* Responses.m */; };
+		26B6B5861E7B109800483664 /* ProjectsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B6B5851E7B109800483664 /* ProjectsController.m */; };
 		26EBFEE31E772DB30068E28E /* HomeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26EBFEE21E772DB30068E28E /* HomeViewCell.m */; };
 		26EBFEF21E7749100068E28E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26EBFEF11E7749100068E28E /* Assets.xcassets */; };
 		26F596B71E734B8900F2DA4B /* HomeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26F596B61E734B8900F2DA4B /* HomeNavigationController.m */; };
@@ -47,6 +48,9 @@
 		26AB20591E601DC6009F1225 /* Domains.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Domains.h; sourceTree = "<group>"; };
 		26AB205A1E601E98009F1225 /* Domains.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Domains.m; sourceTree = "<group>"; };
 		26AB205E1E604A94009F1225 /* Responses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Responses.m; sourceTree = "<group>"; };
+		26B6B5841E7B109800483664 /* ProjectsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProjectsController.h; sourceTree = "<group>"; };
+		26B6B5851E7B109800483664 /* ProjectsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProjectsController.m; sourceTree = "<group>"; };
+		26B6B5871E7B29AB00483664 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		26EBFEE11E772DB30068E28E /* HomeViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewCell.h; sourceTree = "<group>"; };
 		26EBFEE21E772DB30068E28E /* HomeViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewCell.m; sourceTree = "<group>"; };
 		26EBFEE51E773CB40068E28E /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				265DD9461E71FDE000D69041 /* TabController.m */,
 				26F596B51E734B8900F2DA4B /* HomeNavigationController.h */,
 				26F596B61E734B8900F2DA4B /* HomeNavigationController.m */,
+				26B6B5841E7B109800483664 /* ProjectsController.h */,
+				26B6B5851E7B109800483664 /* ProjectsController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -159,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				26EBFEE51E773CB40068E28E /* Colors.h */,
+				26B6B5871E7B29AB00483664 /* Constants.h */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -382,6 +389,7 @@
 				26EBFEE31E772DB30068E28E /* HomeViewCell.m in Sources */,
 				26AB205B1E601E98009F1225 /* Domains.m in Sources */,
 				26F596B71E734B8900F2DA4B /* HomeNavigationController.m in Sources */,
+				26B6B5861E7B109800483664 /* ProjectsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

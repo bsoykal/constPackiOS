@@ -7,12 +7,12 @@
 //
 
 #import "HomeController.h"
+#import "ProjectsController.h"
 #import "HomeViewCell.h"
 
 @interface HomeController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 
 @end
 
@@ -21,7 +21,6 @@
     NSArray *labelArray;
     NSArray *imageArray;
 
-   
 }
 
 
@@ -66,6 +65,29 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    if(indexPath.row==0){
+        [[RestManager getInstance] doGetProjectsRequest : [NSString stringWithFormat:@"%@",[[ConstPack getInstance] kullaniciId]]
+                                                  onResponse: ^(ProjectsResponse* projectsResponse){
+                                                      NSLog(@"Success :: project size %lu",(unsigned long)[projectsResponse.data count]);
+                                                      ProjectsController *prjctsCntr = [[ProjectsController alloc] init];
+                                                      [prjctsCntr setProjectsResponse:projectsResponse];
+                                                      [self.navigationController pushViewController:prjctsCntr animated:YES];
+        
+        
+                                                  }
+                                                     onError: ^(Error *error){
+                                                         NSLog(@"Error occured :: projects request");
+                                                     }];
+        
+    }else{
+        NSLog(@"second");
+    }
+    
+    
+  
+    
+    
+    
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -96,18 +118,7 @@
 
 
 
-//-(void)testStringControllerLoad:(NSString *)str{
-//    
-////    test=str;
-//    
-//}
-
 -(void)viewDidAppear:(BOOL)animated{
-//    [self.homeLabel setText:test];
-    
-//    [self.navigationController pushViewController:nil animated:YES];
-    
-    
 }
 
 

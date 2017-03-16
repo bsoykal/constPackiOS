@@ -9,7 +9,24 @@
 #import "AFNetworking.h"
 #import "RestManager.h"
 
+@interface RestManager ()
+//private property
+@end
+
+static RestManager* singleInstance;
+
 @implementation RestManager
+
++ (RestManager*)getInstance
+{
+    static dispatch_once_t dispatchOnceToken;
+    
+    dispatch_once(&dispatchOnceToken, ^{
+        singleInstance = [[RestManager alloc] init];
+    });
+    
+    return singleInstance;
+}
 
 
 -(void)doPostRequestWithSuffix:(NSString*) suffix withParameters:(NSDictionary*) paramters withSuccess:(void (^)(id responseObject))success withFailure:(void (^)(Error *error))failure{

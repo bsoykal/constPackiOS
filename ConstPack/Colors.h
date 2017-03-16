@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Colors : UITableViewCell
+@interface Colors
 
 @end
