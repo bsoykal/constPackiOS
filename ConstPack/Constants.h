@@ -14,5 +14,5 @@
 
 
 static NSString *const MAIN_STORYBRD = @"Main";
-
+static NSString *const HOME_CELL = @"HomeCell";
 

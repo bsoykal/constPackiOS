@@ -30,6 +30,10 @@
 -(void)viewDidAppear:(BOOL)animated{
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [self initNavBar];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -43,12 +47,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"HomeCell";
     
-    HomeViewCell *homeCell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    HomeViewCell *homeCell = [tableView dequeueReusableCellWithIdentifier:HOME_CELL];
     
     if (homeCell == nil) {
-        homeCell = [[HomeViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        homeCell = [[HomeViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:HOME_CELL];
     }
     NSString *tempPrjName = [[_projectsResponse.data objectAtIndex:indexPath.row ] projeAdi];
     
@@ -62,11 +66,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    
-    
-
-    
     
 }
 
@@ -86,6 +85,19 @@
     if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
         [cell setLayoutMargins:UIEdgeInsetsZero];
     }
+}
+
+-(void) initNavBar{
+    UIImage* logoImage = [UIImage imageNamed:@"constpack_logo_white"];
+    UIImageView *logoImageView=[[UIImageView alloc] initWithImage:logoImage];
+    logoImageView.contentMode = UIViewContentModeScaleAspectFit;
+    
+    self.navigationItem.titleView = logoImageView;
+    [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
+    self.navigationController.navigationBar.translucent = NO;
+    
+    
+    [self.navigationItem.titleView setFrame:CGRectMake(self.navigationItem.titleView.frame.origin.x+40, self.navigationItem.titleView.frame.origin.y,self.navigationItem.titleView.frame.size.width, self.navigationItem.titleView.frame.size.height-15)];
 }
 
 @end

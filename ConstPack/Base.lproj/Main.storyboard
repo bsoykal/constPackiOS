@@ -125,8 +125,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="qr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fV5-c3-JBW">
-                                <rect key="frame" x="159" y="358" width="17" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BURAK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fV5-c3-JBW">
+                                <rect key="frame" x="110" y="64" width="194" height="623"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -140,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RLW-2Y-FYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1143.1159420289855" y="-1052.15625"/>
+            <point key="canvasLocation" x="1143" y="-1053"/>
         </scene>
         <!--Home_Navigation_Controller-->
         <scene sceneID="yUG-3S-nqq">
@@ -151,6 +151,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="Gcb-cP-lsJ">
+                        <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </toolbar>
                     <connections>
                         <segue destination="YRE-tx-oeu" kind="relationship" relationship="rootViewController" id="0Q4-Wi-WQY"/>
                     </connections>
@@ -168,11 +173,11 @@
                         <viewControllerLayoutGuide type="bottom" id="D3x-jX-Mvw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZYn-48-2vO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="31" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1nk-xt-5Cv">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="HomeCell" selectionStyle="default" indentationLevel="1" indentationWidth="10" reuseIdentifier="HomeCell" rowHeight="54" id="f3N-YL-qHu" customClass="HomeViewCell">
@@ -229,6 +234,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Rd3-NG-dsR"/>
                     <navigationItem key="navigationItem" id="fyb-u7-GjT"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="1nk-xt-5Cv" id="FJx-PT-tkN"/>
@@ -251,7 +257,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="31" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ic3-QP-wlD">
-                                <rect key="frame" x="0.0" y="74" width="320" height="406"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="HomeCell" selectionStyle="default" indentationLevel="1" indentationWidth="10" reuseIdentifier="HomeCell" rowHeight="54" id="qRX-Id-mlr" customClass="HomeViewCell">
@@ -297,32 +303,18 @@
                                     <outlet property="delegate" destination="kUY-3T-s6o" id="gRl-mm-5gK"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJn-FV-ias">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="74"/>
-                                <items>
-                                    <navigationItem prompt="" id="MCS-wr-W33"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="uJn-FV-ias" firstAttribute="top" secondItem="uTo-gZ-WDl" secondAttribute="top" id="6XQ-ez-TTR"/>
-                            <constraint firstItem="ic3-QP-wlD" firstAttribute="leading" secondItem="uTo-gZ-WDl" secondAttribute="leading" id="7O9-cp-EQL"/>
-                            <constraint firstAttribute="trailing" secondItem="uJn-FV-ias" secondAttribute="trailing" id="8OX-Z4-u36"/>
-                            <constraint firstAttribute="bottom" secondItem="ic3-QP-wlD" secondAttribute="bottom" id="Bcn-hR-H0B"/>
-                            <constraint firstItem="uJn-FV-ias" firstAttribute="width" secondItem="uTo-gZ-WDl" secondAttribute="width" id="Bsd-4L-kkU"/>
-                            <constraint firstAttribute="trailing" secondItem="ic3-QP-wlD" secondAttribute="trailing" id="EVs-lI-Yv5"/>
-                            <constraint firstItem="uJn-FV-ias" firstAttribute="top" secondItem="uTo-gZ-WDl" secondAttribute="top" id="GMh-yw-NK0"/>
-                            <constraint firstItem="ic3-QP-wlD" firstAttribute="top" secondItem="uJn-FV-ias" secondAttribute="bottom" id="OjU-L1-D4a"/>
-                            <constraint firstAttribute="bottom" secondItem="ic3-QP-wlD" secondAttribute="bottom" id="OnW-uB-3Rb"/>
-                            <constraint firstAttribute="trailing" secondItem="ic3-QP-wlD" secondAttribute="trailing" id="Psp-dd-wjO"/>
-                            <constraint firstItem="ic3-QP-wlD" firstAttribute="top" secondItem="uJn-FV-ias" secondAttribute="bottom" id="b3s-8o-hCF"/>
-                            <constraint firstItem="uJn-FV-ias" firstAttribute="leading" secondItem="uTo-gZ-WDl" secondAttribute="leading" id="cDf-8r-hfW"/>
-                            <constraint firstItem="ic3-QP-wlD" firstAttribute="leading" secondItem="uTo-gZ-WDl" secondAttribute="leading" id="l7y-Zb-hRc"/>
-                            <constraint firstItem="ic3-QP-wlD" firstAttribute="leading" secondItem="uTo-gZ-WDl" secondAttribute="leading" id="oRY-U1-cFN"/>
+                            <constraint firstAttribute="bottom" secondItem="ic3-QP-wlD" secondAttribute="bottom" id="0Qt-Ch-NRQ"/>
+                            <constraint firstItem="ic3-QP-wlD" firstAttribute="top" secondItem="uTo-gZ-WDl" secondAttribute="top" id="BFT-k5-U4b"/>
+                            <constraint firstItem="ic3-QP-wlD" firstAttribute="leading" secondItem="uTo-gZ-WDl" secondAttribute="leading" id="Qle-fd-eQT"/>
+                            <constraint firstAttribute="trailing" secondItem="ic3-QP-wlD" secondAttribute="trailing" id="nQ6-wg-4sN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="a9D-aO-wgE"/>
+                    <navigationItem key="navigationItem" id="mRV-gj-Fm0"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="ic3-QP-wlD" id="p6n-5O-9IR"/>
@@ -330,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IUT-aG-nBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844" y="-253"/>
+            <point key="canvasLocation" x="1631" y="-253"/>
         </scene>
         <!--Profile_Controller-->
         <scene sceneID="ySE-Th-3oQ">
