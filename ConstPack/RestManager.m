@@ -109,5 +109,18 @@ static RestManager* singleInstance;
     }];
 }
 
+-(void)doGetBlocksRequest :(int) projectId onResponse:(void (^)(BlocksResponse* blockResponse))success onError:(void (^)(Error *error)) failure{
+
+    
+    [self doGetRequestWithSuffix : [NSString stringWithFormat:@"%@/%d",@"Block",projectId]  withSuccess:^(id responseObject) {
+        NSError* err = nil;
+        BlocksResponse *blockResponse = [[BlocksResponse alloc] initWithDictionary:responseObject error:&err];
+        success(blockResponse);
+        
+    } withFailure:^(Error *error) {
+        failure(error);
+    }];
+}
+
 
 @end

@@ -35,13 +35,6 @@
     if ([[[UIDevice currentDevice]systemVersion]floatValue] >= 9.0) {
         _tableView.cellLayoutMarginsFollowReadableWidth = NO;
     }
-    
-    UIImage* logoImage = [UIImage imageNamed:@"constpack_logo_white"];
-    UIImageView *logoImageView=[[UIImageView alloc] initWithImage:logoImage];
-    [logoImageView setFrame:(CGRectMake(logoImageView.frame.origin.x, logoImageView.frame.origin.y, logoImageView.frame.size.width* 1/2, logoImageView.frame.size.height* 1/2))];
-    
-    self.navigationItem.titleView = logoImageView;
-
 }
 
 
@@ -75,14 +68,11 @@
     if(indexPath.row==0){
         [[RestManager getInstance] doGetProjectsRequest : [NSString stringWithFormat:@"%@",[[ConstPack getInstance] kullaniciId]]
                                                   onResponse: ^(ProjectsResponse* projectsResponse){
-                                                      NSLog(@"Success :: project size %lu",(unsigned long)[projectsResponse.data count]);
                                                       UIStoryboard *storyboard = [UIStoryboard storyboardWithName:MAIN_STORYBRD bundle: nil];
                                                       ProjectsController *prjctsCntr  = (ProjectsController *)([storyboard instantiateViewControllerWithIdentifier:@"ProjectsController"]);
                                                 
                                                       [prjctsCntr setProjectsResponse:projectsResponse];
                                                       [self.navigationController pushViewController:prjctsCntr animated:YES];
-        
-        
                                                   }
                                                      onError: ^(Error *error){
                                                          NSLog(@"Error occured :: projects request");
@@ -91,12 +81,6 @@
     }else{
         NSLog(@"second");
     }
-    
-    
-  
-    
-    
-    
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -128,17 +112,12 @@
 
 
 -(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
 }
 
 
 -(void)viewWillAppear:(BOOL)animated{
-    
     [super viewWillAppear:animated];
-    // [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"ic_project"] forBarMetrics:UIBarMetricsCompact];
-    
-    [self.navigationController.navigationBar setBarTintColor:[UIColor blueColor]];
-    self.navigationController.navigationBar.translucent = NO;
-//
 }
 
 

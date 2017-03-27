@@ -23,3 +23,6 @@
 
 @implementation ProjectsResponse
 @end
+
+@implementation BlocksResponse
+@end

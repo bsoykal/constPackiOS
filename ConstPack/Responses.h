@@ -14,6 +14,7 @@
 @end
 
 @protocol Project @end
+@protocol Block @end
 
 #pragma mark BaseResponse
 @interface BaseResponse : JSONModel
@@ -28,7 +29,11 @@
 @end
 
 #pragma mark ProjectsResponse
-
 @interface ProjectsResponse : BaseResponse
 @property(nonatomic, strong)  NSMutableArray<Project> * data;
+@end
+
+#pragma mark BlocksResponse
+@interface BlocksResponse : BaseResponse
+@property(nonatomic, strong)  NSMutableArray<Block> *data;
 @end

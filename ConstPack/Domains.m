@@ -12,15 +12,20 @@
 @implementation Domains
 @end
 
-@implementation User
-@end
-
-@implementation Project
-@end
-
 @implementation Error
 - (void) initWithErrorId:(int) errorId withMessage:(NSString *)errorMsg{
     self.errorId = errorId;
     self.errorMsg = errorMsg;
 }
 @end
+
+@implementation User
+@end
+
+@implementation Project
+@end
+
+@implementation Block
+@end
+
+

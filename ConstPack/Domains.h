@@ -11,7 +11,12 @@
 @interface Domains : NSObject
 @end
 
-
+#pragma mark Error
+@interface Error : NSObject
+@property (nonatomic,assign) int errorId;
+@property (nonatomic,retain) NSString *errorMsg;
+- (void) initWithErrorId:(int) errorId withMessage:(NSString *)errorMsg;
+@end
 
 #pragma mark User
 @interface User : JSONModel
@@ -23,17 +28,17 @@
 @property (nonatomic,assign) BOOL durum;
 @end
 
-
 #pragma mark Project
 @interface Project :JSONModel
 @property (nonatomic,assign) int projeId;
 @property (nonatomic,retain) NSString *projeAdi;
 @end
 
-
-#pragma mark Error
-@interface Error : NSObject
-@property (nonatomic,assign) int errorId;
-@property (nonatomic,retain) NSString *errorMsg;
-- (void) initWithErrorId:(int) errorId withMessage:(NSString *)errorMsg;
+#pragma mark Block
+@interface Block :JSONModel
+@property (nonatomic,assign) int blokId;
+@property (nonatomic,assign) int projeId;
+@property (nonatomic,retain) NSString *blokAdi;
+@property (nonatomic,assign) BOOL durum;
 @end
+
