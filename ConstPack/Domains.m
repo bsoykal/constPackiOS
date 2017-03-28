@@ -28,4 +28,8 @@
 @implementation Block
 @end
 
+@implementation Floor
+@end
 
+@implementation Product
+@end

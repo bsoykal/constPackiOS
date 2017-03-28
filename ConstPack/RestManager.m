@@ -122,5 +122,31 @@ static RestManager* singleInstance;
     }];
 }
 
+-(void)doGetFloorRequest :(int) blockId onResponse:(void (^)(FloorResponse* floorResponse))success onError:(void (^)(Error *error)) failure{
+    
+    
+    [self doGetRequestWithSuffix : [NSString stringWithFormat:@"%@/%d",@"Floor",blockId]  withSuccess:^(id responseObject) {
+        NSError* err = nil;
+        FloorResponse *floorResponse = [[FloorResponse alloc] initWithDictionary:responseObject error:&err];
+        success(floorResponse);
+        
+    } withFailure:^(Error *error) {
+        failure(error);
+    }];
+}
+
+-(void)doGetProductRequest :(int) floorId onResponse:(void (^)(ProductResponse* productResponse))success onError:(void (^)(Error *error)) failure{
+    
+    
+    [self doGetRequestWithSuffix : [NSString stringWithFormat:@"%@/%d",@"Product",floorId]  withSuccess:^(id responseObject) {
+        NSError* err = nil;
+        ProductResponse *productResponse = [[ProductResponse alloc] initWithDictionary:responseObject error:&err];
+        success(productResponse);
+        
+    } withFailure:^(Error *error) {
+        failure(error);
+    }];
+}
+
 
 @end

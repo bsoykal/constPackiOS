@@ -42,3 +42,20 @@
 @property (nonatomic,assign) BOOL durum;
 @end
 
+#pragma mark Floor
+@interface Floor :JSONModel
+@property (nonatomic,assign) int katid;
+@property (nonatomic,assign) int blokId;
+@property (nonatomic,retain) NSString *katAdi;
+@property (nonatomic,assign) BOOL durum;
+@end
+
+#pragma mark Product
+@interface Product :JSONModel
+@property (nonatomic,assign) int urunId;
+@property (nonatomic,assign) int katId;
+@property (nonatomic,retain) NSString *urunAdi;
+@property (nonatomic,assign) BOOL durum;
+@end
+
+

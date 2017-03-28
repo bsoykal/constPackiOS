@@ -10,6 +10,7 @@
 		261186D71E5F8449001C0AEF /* constpack_logo_white.png in Resources */ = {isa = PBXBuildFile; fileRef = 261186D61E5F8449001C0AEF /* constpack_logo_white.png */; };
 		261186D91E5F84A1001C0AEF /* splash_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 261186D81E5F84A1001C0AEF /* splash_bg.png */; };
 		263325521E89AF7B00181635 /* BlockController.m in Sources */ = {isa = PBXBuildFile; fileRef = 263325511E89AF7B00181635 /* BlockController.m */; };
+		263325551E8AD87200181635 /* FloorController.m in Sources */ = {isa = PBXBuildFile; fileRef = 263325541E8AD87200181635 /* FloorController.m */; };
 		265DD93E1E71E43500D69041 /* QRControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265DD93D1E71E43500D69041 /* QRControllerViewController.m */; };
 		265DD9411E71E45100D69041 /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = 265DD9401E71E45100D69041 /* ProfileController.m */; };
 		265DD9441E71F22A00D69041 /* ConstPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 265DD9431E71F22A00D69041 /* ConstPack.m */; };
@@ -35,6 +36,8 @@
 		261186D81E5F84A1001C0AEF /* splash_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_bg.png; sourceTree = "<group>"; };
 		263325501E89AF7B00181635 /* BlockController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockController.h; sourceTree = "<group>"; };
 		263325511E89AF7B00181635 /* BlockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockController.m; sourceTree = "<group>"; };
+		263325531E8AD87200181635 /* FloorController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloorController.h; sourceTree = "<group>"; };
+		263325541E8AD87200181635 /* FloorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloorController.m; sourceTree = "<group>"; };
 		265DD93C1E71E43500D69041 /* QRControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRControllerViewController.h; sourceTree = "<group>"; };
 		265DD93D1E71E43500D69041 /* QRControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRControllerViewController.m; sourceTree = "<group>"; };
 		265DD93F1E71E45100D69041 /* ProfileController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileController.h; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				26B6B5851E7B109800483664 /* ProjectsController.m */,
 				263325501E89AF7B00181635 /* BlockController.h */,
 				263325511E89AF7B00181635 /* BlockController.m */,
+				263325531E8AD87200181635 /* FloorController.h */,
+				263325541E8AD87200181635 /* FloorController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 				265DD93E1E71E43500D69041 /* QRControllerViewController.m in Sources */,
 				8D6626EC1E4A6A1900C38AFE /* RestManager.m in Sources */,
 				26AB205F1E604A94009F1225 /* Responses.m in Sources */,
+				263325551E8AD87200181635 /* FloorController.m in Sources */,
 				8D6626D41E4A619F00C38AFE /* AppDelegate.m in Sources */,
 				8D6626D11E4A619F00C38AFE /* main.m in Sources */,
 				263325521E89AF7B00181635 /* BlockController.m in Sources */,

@@ -26,3 +26,9 @@
 
 @implementation BlocksResponse
 @end
+
+@implementation FloorResponse
+@end
+
+@implementation ProductResponse
+@end
